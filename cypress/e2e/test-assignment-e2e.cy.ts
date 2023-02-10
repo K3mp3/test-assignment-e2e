@@ -37,7 +37,6 @@ describe("Testing url", () => {
     cy.get("input").type("Cars 3");
     cy.get("button").click();
     cy.wait("@omdbCall").its("request.url").should("contain", "Cars%203");
-    //cy.get("h3").contains("Cars 3").should("exist");
   });
 })
 
